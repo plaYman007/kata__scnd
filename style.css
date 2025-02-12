@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: url(./fonts/TTLakes-Regular.woff) format("woff"),
+    url(./fonts/TTLakes-Regular.ttf) format("truetype"),
+    url(./fonts/TTLakes-Regular.eot) format("embedded-opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url(./fonts/TTLakes-Medium.woff) format("woff"),
+    url(./fonts/TTLakes-Medium.ttf) format("truetype"),
+    url(./fonts/TTLakes-Medium.eot) format("embedded-opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url(./fonts/TTLakes-Bold.woff) format("woff"),
+    url(./fonts/TTLakes-Bold.ttf) format("truetype"),
+    url(./fonts/TTLakes-Bold.eot) format("embedded-opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.social-btns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  padding-top: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.social-btns__item {
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.primary-btn {
+  display: block;
+  font-size: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.primary-btn:hover::after {
+  transition: 0.1s ease-in;
+  transform: scale(1.2);
+}
+.primary-btn::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: #ff3e79;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+}
+.primary-btn--type_call::after {
+  background-image: url(./img/call.svg);
+}
+.primary-btn--type_mail::after {
+  background-image: url(./img/mail.svg);
+}
+.primary-btn--type_profile::after {
+  background-image: url(./img/profile.svg);
+}
+.primary-btn--type_search::after {
+  background-image: url(./img/search.svg);
+}
+.primary-btn--type_close::after {
+  background-image: url(./img/close.svg);
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 95vh;
+  padding-left: 4px;
+  padding-bottom: 32px;
+  background-color: #fff;
+  width: 320px;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+.primary-btn--type_close {
+  margin-right: 16px;
+}
+.logo {
+  margin-right: auto;
+}
+
+.navigation {
+  margin-bottom: auto;
+  padding: 0;
+  list-style: none;
+}
+.navigation__item {
+  margin-bottom: 16px;
+  transition: 0.4s ease;
+}
+
+.navigation__link {
+  display: block;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: "TT Lakes", "Verdana", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.2s ease;
+}
+
+.navigation__link:hover {
+  color: #b2b2b4;
+}
+.navigation__link:hover::before {
+  content: "";
+  background-image: url("img/highlight.svg");
+  width: 4px;
+  height: 32px;
+  position: absolute;
+  left: -5px;
+  transform: translateY(-5px);
+}
+
+.contacts {
+  padding-left: 16px;
+  margin-top: 32px;
+}
+.contacts__email {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-family: "TT Lakes", "Verdana", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  color: #000;
+}
+.contacts__t-number {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-family: "TT Lakes", "Verdana", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  text-decoration: none;
+  color: #000;
+}
+
+.languages-list {
+  display: flex;
+  padding-left: 16px;
+  margin: 0;
+  list-style: none;
+}
+.languages-list__item {
+  margin-right: 7px;
+  font-family: "TT Lakes", "Verdana", sans-serif;
+}
+.languages-list__link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  color: #000;
+}
+.languages-list__link:hover {
+  color: #7e7e82;
+}
